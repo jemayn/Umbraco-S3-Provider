@@ -110,9 +110,10 @@ Replace config file located `~/config/imageprocessor/security.config`
   <services>
     <service prefix="media/" name="CloudImageService" type="ImageProcessor.Web.Services.CloudImageService, ImageProcessor.Web">
       <settings>
+        <setting key="Container" value="[MediaPrefix]"/>
         <setting key="MaxBytes" value="8194304"/>
         <setting key="Timeout" value="30000"/>
-        <setting key="Host" value="http://{Your Unique Bucket Name}.s3.amazonaws.com/{Your Key Prefix}/"/>
+        <setting key="Host" value="http://{Your Unique Bucket Name}.s3.amazonaws.com"/>
       </settings>
     </service>
   </services>
